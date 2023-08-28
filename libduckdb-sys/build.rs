@@ -258,6 +258,28 @@ mod build_linked {
             if pkg_config::Config::new().probe(link_lib).is_err() {
                 // Otherwise just emit the bare minimum link commands.
                 println!("cargo:rustc-link-lib={}={}", find_link_mode(), link_lib);
+
+                // println!("cargo:rustc-link-lib={}={}", find_link_mode(), "duckdb_web");
+                // println!("cargo:rustc-link-lib=dylib=duckdb_re2");
+                // println!("cargo:rustc-link-lib=dylib=duckdb_utf8proc");
+                // println!("cargo:rustc-link-lib=dylib=duckdb_fmt");
+                // println!("cargo:rustc-link-lib=dylib=duckdb_pg_query");
+                // println!("cargo:rustc-link-lib=dylib=duckdb_hyperloglog");
+                // println!("cargo:rustc-link-lib=dylib=duckdb_miniz");
+                // println!("cargo:rustc-link-lib=dylib=duckdb_fastpforlib");
+                // println!("cargo:rustc-link-lib=dylib=duckdb_fsst");
+                // println!("cargo:rustc-link-lib=dylib=duckdb_mbedtls");
+                // println!("cargo:rustc-link-search=/Users/hokada/develop/src/github.com/duckdb/duckdb-wasm/build/relperf/eh/third_party/duckdb/src/duckdb_ep-build/third_party/re2");
+                // println!("cargo:rustc-link-search=/Users/hokada/develop/src/github.com/duckdb/duckdb-wasm/build/relperf/eh/third_party/duckdb/src/duckdb_ep-build/third_party/utf8proc");
+                // println!("cargo:rustc-link-search=/Users/hokada/develop/src/github.com/duckdb/duckdb-wasm/build/relperf/eh/third_party/duckdb/src/duckdb_ep-build/third_party/fmt");
+                // println!("cargo:rustc-link-search=/Users/hokada/develop/src/github.com/duckdb/duckdb-wasm/build/relperf/eh/third_party/duckdb/src/duckdb_ep-build/third_party/libpg_query");
+                // println!("cargo:rustc-link-search=/Users/hokada/develop/src/github.com/duckdb/duckdb-wasm/build/relperf/eh/third_party/duckdb/src/duckdb_ep-build/third_party/hyperloglog");
+                // println!("cargo:rustc-link-search=/Users/hokada/develop/src/github.com/duckdb/duckdb-wasm/build/relperf/eh/third_party/duckdb/src/duckdb_ep-build/third_party/miniz");
+                // println!("cargo:rustc-link-search=/Users/hokada/develop/src/github.com/duckdb/duckdb-wasm/build/relperf/eh/third_party/duckdb/src/duckdb_ep-build/third_party/fastpforlib");
+                // println!("cargo:rustc-link-search=/Users/hokada/develop/src/github.com/duckdb/duckdb-wasm/build/relperf/eh/third_party/duckdb/src/duckdb_ep-build/third_party/fsst");
+                // println!("cargo:rustc-link-search=/Users/hokada/develop/src/github.com/duckdb/duckdb-wasm/build/relperf/eh/third_party/duckdb/src/duckdb_ep-build/third_party/mbedtls");
+                //
+                // println!("cargo:rustc-link-search=/Users/hokada/develop/src/github.com/duckdb/duckdb-wasm/build/relperf/eh/third_party/duckdb/src/duckdb_ep-build/src");
                 println!("cargo:rustc-link-search={dir}");
             }
             return HeaderLocation::FromEnvironment;

@@ -70,7 +70,7 @@ uuid = { version = "1.0", features = ["v4"] }
 unicase = "2.6.0"
 rand = "0.8.3"
 tempdir = "0.3.7"
-polars-core = "*"
+polars-core = { git = "https://github.com/pola-rs/polars.git", rev = "be38947" }
 # criterion = "0.3"
 
 # [[bench]]
@@ -93,5 +93,5 @@ all-features = false
 
 [[example]]
 name = "hello-ext"
-crate-type = ["cdylib"]
+crate-type = ["staticlib"]
 required-features = ["vtab-loadable"]

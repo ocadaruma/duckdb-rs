@@ -69,7 +69,7 @@ impl VTab for HelloVTab {
                 (*init_info).done = true;
                 let vector = output.flat_vector(0);
                 let name = CString::from_raw((*bind_info).name);
-                let result = CString::new(format!("Hello {}", name.to_str()?))?;
+                let result = CString::new(format!("Hello:::weee {}", name.to_str()?))?;
                 // Can't consume the CString
                 (*bind_info).name = CString::into_raw(name);
                 vector.insert(0, result);

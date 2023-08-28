@@ -1,0 +1,12 @@
+#[build]
+#target = "wasm32-unknown-emscripten"
+
+#[target.wasm32-unknown-emscripten]
+[build]
+target = "wasm32-unknown-unknown"
+rustflags = [
+    "-Clink-args=-fwasm-exceptions",
+    "-Cllvm-args=-enable-emscripten-cxx-exceptions=0",
+    "-Clink-arg=-sDISABLE_EXCEPTION_CATCHING=1",
+    "-Cllvm-args=-wasm-enable-sjlj",
+]
